@@ -30,11 +30,6 @@ public:
   double NormalizeAngle(double angle);
 
   /**
-  * Normalize radar coordinates vector
-  */
-  void NormalizeRadarVector(VectorXd &z);
-
-  /**
   * A helper method to calculate Cartesian coordinates from Polar ones
   */
   void CalculateCartesian(const double &rho, const double &phi, double &px, double &py);
