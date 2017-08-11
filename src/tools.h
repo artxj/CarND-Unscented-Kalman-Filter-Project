@@ -24,6 +24,21 @@ public:
   */
   VectorXd CalculateRMSE(const vector<VectorXd> &estimations, const vector<VectorXd> &ground_truth);
 
+  /**
+  * Returns normalized angle in range [-pi; pi]
+  */
+  double NormalizeAngle(double angle);
+
+  /**
+  * Normalize radar coordinates vector
+  */
+  void NormalizeRadarVector(VectorXd &z);
+
+  /**
+  * A helper method to calculate Cartesian coordinates from Polar ones
+  */
+  void CalculateCartesian(const double &rho, const double &phi, double &px, double &py);
+
 };
 
 #endif /* TOOLS_H_ */
